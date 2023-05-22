@@ -45,14 +45,34 @@ code {
 
 .temp > h1 {
   font-size: 70px;
+  margin-bottom: 30px;
 }
 
 .dop {
   margin-top: 75px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background: hsla(202, 76%, 67%, 0.445);
   color: rgba(31, 100, 247, 0.945);
   border-radius: 30px;
-  width: 50%;
+  width: 40%;
+  height: 100px;
+}
+
+.dop > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.dop-icons {
+  width: 28px;
+  height: 28px;
+}
+
+.dop-icons.wind {
+  width: 33px;
+  height: 33px;
 }

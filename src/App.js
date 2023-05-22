@@ -1,25 +1,44 @@
 import { useSearchCityQuery } from './store/weather/weather.api'
+import atmospheric from './assets/images/atmospheric.png'
+import humidity from './assets/images/humidity.png'
+import wind from './assets/images/wind.png'
 
 function App() {
   const { data, isError, isLoading } = useSearchCityQuery('London')
-
+  console.log(data)
   return (
     <div className="wrapper">
       <input placeholder="Введите город..." className="search" type="text" />
-      <div className="temp">
-        <h2>Город</h2>
-        <h1>28°C</h1>
-        {isLoading ? (
-          <p>Загрузка...</p>
-        ) : (
-          <h4>{data.weather[0].description}</h4>
-        )}
-      </div>
-      <div className="dop">
-        <h3>Вероятность дождя</h3>
-        <h3>Влажность</h3>
-        <h3>Скорость ветра</h3>
-      </div>
+      {isLoading ? (
+        <p>Загрузка...</p>
+      ) : (
+        <>
+          <div className="temp">
+            <h2>{data?.name}</h2>
+            <h1>{data?.main?.temp.toFixed()}°</h1>
+            <h4 className="description">{data.weather[0].description}</h4>
+            <p>
+              {data?.main?.temp_max.toFixed()}° / {''}
+              {data?.main?.temp_min.toFixed()}° Ощущается как{' '}
+              {data?.main?.feels_like.toFixed()}°
+            </p>
+          </div>
+          <div className="dop">
+            <span>
+              <img src={humidity} className="dop-icons" />
+              <h3>{data?.main?.humidity} %</h3>
+            </span>
+            <span>
+              <img src={wind} className="dop-icons wind" />
+              <h3>{data?.wind?.speed} м/с</h3>
+            </span>
+            <span>
+              <img src={atmospheric} className="dop-icons" />
+              <h3> {data?.main?.pressure} мм р.с.</h3>
+            </span>
+          </div>
+        </>
+      )}
     </div>
   )
 }
