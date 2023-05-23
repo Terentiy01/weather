@@ -1,14 +1,29 @@
 import { useSearchCityQuery } from './store/weather/weather.api'
+import { useState } from 'react'
 import atmospheric from './assets/images/atmospheric.png'
 import humidity from './assets/images/humidity.png'
 import wind from './assets/images/wind.png'
+import { useDebounce } from './hooks/debounce'
 
 function App() {
-  const { data, isError, isLoading } = useSearchCityQuery('London')
-  console.log(data)
+  const [search, setSearch] = useState('')
+  const debounced = useDebounce(search)
+
+  const { data, isError, isLoading } = useSearchCityQuery(debounced, {
+    skip: debounced.length < 2,
+    refetchOnFocus: true,
+  })
+
   return (
     <div className="wrapper">
-      <input placeholder="Введите город..." className="search" type="text" />
+      <input
+        onChange={(event) => setSearch(event.target.value)}
+        placeholder="Введите город..."
+        className="search"
+        type="text"
+        value={search}
+      />
+
       {isLoading ? (
         <p>Загрузка...</p>
       ) : (
@@ -16,7 +31,7 @@ function App() {
           <div className="temp">
             <h2>{data?.name}</h2>
             <h1>{data?.main?.temp.toFixed()}°</h1>
-            <h4 className="description">{data.weather[0].description}</h4>
+            <h4 className="description">{data?.weather[0]?.description}</h4>
             <p>
               {data?.main?.temp_max.toFixed()}° / {''}
               {data?.main?.temp_min.toFixed()}° Ощущается как{' '}
@@ -34,7 +49,7 @@ function App() {
             </span>
             <span>
               <img src={atmospheric} className="dop-icons" />
-              <h3> {data?.main?.pressure} мм р.с.</h3>
+              <h3> {data?.main?.pressure} мм. р.с.</h3>
             </span>
           </div>
         </>
