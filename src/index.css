@@ -37,7 +37,7 @@ code {
 
 .temp {
   text-align: center;
-  padding-top: 85px;
+  /* padding-top: 85px; */
   line-height: 20px;
   color: rgba(31, 100, 247, 0.945);
   font-style: bold;
@@ -45,7 +45,7 @@ code {
 
 .temp > h1 {
   font-size: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .dop {
@@ -75,4 +75,17 @@ code {
 .dop-icons.wind {
   width: 33px;
   height: 33px;
+}
+
+.error {
+  color: rgba(255, 0, 0, 0.619);
+  padding-top: 100px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.loading {
+  padding-top: 100px;
+  font-size: 25px;
+  font-weight: 700;
 }
