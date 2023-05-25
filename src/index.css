@@ -3,7 +3,7 @@ body {
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, #b9deed, #efefef);
+  background: linear-gradient(90deg, #6ec7ea, #efefef);
 }
 
 code {
@@ -24,7 +24,7 @@ code {
   border: none;
   height: 30px;
   padding: 5px 20px;
-  background: hsla(202, 76%, 67%, 0.445);
+  background: hsla(202, 91%, 69%, 0.551);
   border-radius: 25px;
   font-size: 1.2rem;
   outline: none;
@@ -32,14 +32,18 @@ code {
 }
 
 ::placeholder {
-  color: rgba(31, 100, 247, 0.945);
+  color: rgba(0, 4, 255, 0.537);
+}
+
+.picture {
+  margin-bottom: -28px;
+  margin-top: -18px;
 }
 
 .temp {
   text-align: center;
-  /* padding-top: 85px; */
   line-height: 20px;
-  color: rgba(31, 100, 247, 0.945);
+  color: hsl(203, 100%, 50%);
   font-style: bold;
 }
 
@@ -53,8 +57,7 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: hsla(202, 76%, 67%, 0.445);
-  color: rgba(31, 100, 247, 0.945);
+  background: hsla(202, 91%, 69%, 0.551);
   border-radius: 30px;
   width: 40%;
   height: 100px;

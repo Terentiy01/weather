@@ -1,7 +1,7 @@
-import { useSearchCityQuery } from './store/weather/weather.api'
 import { useState } from 'react'
-import { atmospheric, humidity, wind } from './assets/icons/index'
 import { useDebounce } from './hooks/debounce'
+import { useSearchCityQuery } from './store/weather/weather.api'
+import { atmospheric, humidity, wind } from './assets/icons/index'
 import { images } from './assets/const/index'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     skip: debounced.length < 2,
     refetchOnFocus: true,
   })
-  console.log(data)
+
   return (
     <div className="wrapper">
       <input
@@ -36,10 +36,13 @@ function App() {
             <div className="temp">
               {images.map((element) => {
                 if (element.text === data?.weather[0]?.description) {
-                  return <img src={element.image} />
+                  return (
+                    <div className="picture">
+                      <img src={element.image} />
+                    </div>
+                  )
                 }
               })}
-
               <h2>{data?.name}</h2>
               <h1>{data?.main?.temp.toFixed()}°</h1>
               <h4 className="description">{data?.weather[0]?.description}</h4>
@@ -49,18 +52,19 @@ function App() {
                 {data?.main?.feels_like.toFixed()}°
               </p>
             </div>
+
             <div className="dop">
               <span>
                 <img src={humidity} className="dop-icons" />
-                <h3>{data?.main?.humidity} %</h3>
+                <p>{data?.main?.humidity} %</p>
               </span>
               <span>
                 <img src={wind} className="dop-icons wind" />
-                <h3>{data?.wind?.speed} м/с</h3>
+                <p>{data?.wind?.speed} м/с</p>
               </span>
               <span>
                 <img src={atmospheric} className="dop-icons" />
-                <h3> {data?.main?.pressure} мм. р.с.</h3>
+                <p> {data?.main?.pressure} мм. р.с.</p>
               </span>
             </div>
           </>

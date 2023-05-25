@@ -1,48 +1,57 @@
-import { test } from '../weather-conditions/index'
+import {
+  clear,
+  cloud,
+  partlyCloudy,
+  smallRain,
+  rain,
+  stormWithRain,
+  storm,
+  snow,
+} from '../weather-conditions/index'
 
 export const images = [
   {
-    image: test,
+    image: clear,
     text: 'ясно',
   },
   {
-    image: test,
+    image: cloud,
     text: 'пасмурно',
   },
   {
-    image: test,
+    image: cloud,
     text: 'небольшая облачность',
   },
   {
-    image: test,
+    image: cloud,
     text: 'переменная облачность',
   },
   {
-    image: test,
+    image: partlyCloudy,
     text: 'облачно с прояснениями',
   },
   {
-    image: test,
+    image: smallRain,
     text: 'небольшой дождь',
   },
   {
-    image: test,
+    image: rain,
     text: 'дождь',
   },
   {
-    image: test,
+    image: storm,
     text: 'гроза',
   },
   {
-    image: test,
+    image: stormWithRain,
     text: 'гроза с дождем',
   },
   {
-    image: test,
+    image: stormWithRain,
     text: 'дождь с грозой',
   },
   {
-    image: test,
+    image: snow,
     text: 'снег',
   },
 ]
