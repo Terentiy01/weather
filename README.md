@@ -1,1 +1,1 @@
-Проект: git push –u origin master
+Проект: https://terentiy01.github.io/weather/
