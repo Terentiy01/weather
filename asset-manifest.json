@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Terentiy01/weather.git/static/css/main.8c65f25b.css",
+    "main.js": "/Terentiy01/weather.git/static/js/main.29d8cb2b.js",
+    "static/media/atmospheric.png": "/Terentiy01/weather.git/static/media/atmospheric.fcf930a1940d8a9e83fd.png",
+    "static/media/снег.png": "/Terentiy01/weather.git/static/media/снег.16ed564800d58fc6cbb6.png",
+    "static/media/humidity.png": "/Terentiy01/weather.git/static/media/humidity.738c21baa831a0df856d.png",
+    "static/media/дождь с грозой.png": "/Terentiy01/weather.git/static/media/дождь с грозой.f45fdba8c094ad2e6d91.png",
+    "static/media/дождь.png": "/Terentiy01/weather.git/static/media/дождь.97d510c184c02def3f56.png",
+    "static/media/гроза.png": "/Terentiy01/weather.git/static/media/гроза.6328048d635d8a6ca19a.png",
+    "static/media/wind.png": "/Terentiy01/weather.git/static/media/wind.cfe4c91d32d00f6b0ffc.png",
+    "static/media/облачно с прояснениями.png": "/Terentiy01/weather.git/static/media/облачно с прояснениями.9b172ece7e96f99ba125.png",
+    "static/media/ясно.png": "/Terentiy01/weather.git/static/media/ясно.7916824d1e4d25fc350d.png",
+    "static/media/небольшой дождь.png": "/Terentiy01/weather.git/static/media/небольшой дождь.8f6008c52d73f46d9111.png",
+    "static/media/небольшая облачность.png": "/Terentiy01/weather.git/static/media/небольшая облачность.56b67a66b4f57a8ef53d.png",
+    "index.html": "/Terentiy01/weather.git/index.html",
+    "main.8c65f25b.css.map": "/Terentiy01/weather.git/static/css/main.8c65f25b.css.map",
+    "main.29d8cb2b.js.map": "/Terentiy01/weather.git/static/js/main.29d8cb2b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c65f25b.css",
+    "static/js/main.29d8cb2b.js"
+  ]
+}
